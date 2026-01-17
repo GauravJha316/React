@@ -1,20 +1,29 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
 
-// const heading=React.createElement("h1", {id:"heading"},("hello world from react"))
-// const root=ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading)
+//react element using react
+// const heading=React.createElement("h1",{id:"heading"},"namaste React")
+// console.log(heading)
+
+//react element using jsx
 
 
-const parent=React.createElement("div", {id:"Parents"},React.createElement("div",{id:"child"},
-[React.createElement("h1", {}, "I am an h1 tag"),React.createElement("h2", {}, "I am an h2 tag💞")] ),
+// React element
+const Title = ()=> (
+    <h1>Namaste React using JSX</h1>
+);
 
-React.createElement("div",{id:"child2"},
-[React.createElement("h1", {}, "I am an h1 tag"),React.createElement("h2", {}, "I am an h2 tag")] )
+//ReactComponent
+//its a Component composition 
+const HeadingComponent =() =>(
+    <div id="container">
+        <h1 className="heading"> Namaste React</h1>
+        <Title/>
+    </div> 
 )
-console.log(parent)
 
-const root=createRoot(document.getElementById("root"))
-
-
-root.render(parent);
+const root=ReactDOM.createRoot(document.getElementById("root"));
+ 
+// root.render(heading);
+root.render(<HeadingComponent/>);
