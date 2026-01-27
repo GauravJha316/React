@@ -1,51 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createRoot } from "react-dom/client";
-
-const Header=()=>{
-    return(
-        <div className="header">
-            <div className="logo">
-                <img src="https://www.pinterest.com/pin/266064290473852933/" alt="logo"/>
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                      <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-
-const RestaurantCard=(props)=>{
-    const {resData  }=props;
-    if (!resData?.info) return null;
-
-    const {
-        cloudinaryImageId,
-        name,
-        cuisines,
-        avgRating,
-        costForTwo,
-        sla,
-      } =resData.info;
-    return(
-        <div className="res-card">
-            <img alt="res-logo" className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"+ cloudinaryImageId}/>
-            <h3>{name}</h3>
-             <h4>{cuisines?.slice(0, 2).join(", ")}</h4>
-            <h3>{avgRating}</h3>   
-            <h3>{costForTwo}</h3>
-            <h4>{sla?.deliveryTime} mins</h4>
-        </div>
-    )
-}
-  
-
 const resList = [
   {
     info: {
@@ -1517,43 +1469,6 @@ const resList = [
       type: "WEBLINK",
     },
   },
-];
+]; 
 
-
-
-const Body =()=>{
-
-    return(
-        
-        <div className="body">
-            <div className="search">
-                Search
-            </div>
-            {/* <div className="res-container">
-                
-                {
-                    resList.map((restaurant) => (<RestaurantCard key={restaurant.info.id} resData={restaurant}/>))
-                }
-
-            </div> */}
-            <div className="res-container">
-  {resList.map((restaurant, index) => {
-    console.log(index, restaurant?.info?.name);
-    return <RestaurantCard key={restaurant.info.id} resData={restaurant} />;
-  })}
-</div>
-        </div>
-    )
-}
-const AppLayout =() =>{
-    return(
-        <div className="app">
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-const root=ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout/>);
+export default resList;
