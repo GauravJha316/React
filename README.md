@@ -15,3 +15,7 @@ import {Components} from "path";
 {Normal Js utilty function }
 -useState() - superpowerful state Variable in react
 -useEffect()
+
+-2 type of routing in webapp
+-client slide routing
+-Server side routing

@@ -31,7 +31,7 @@ const fetchData = async ()=> {
 //     return <Shimmer/>
 // }
   
-    return listOfRestaurant.length===0 ?  <Shimmer/> :(
+    return (listOfRestaurant?.length??0)  === 0 ?  <Shimmer/> :(
         
         <div className="body">
             <div className="filter">
