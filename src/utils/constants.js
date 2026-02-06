@@ -3,3 +3,8 @@ export const CDN_URL=
 
 export const LOGO_URl=
 "https://www.pinterest.com/pin/266064290473852933/"
+
+// export const MENU_API=
+// "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId=766502"
+
+export const MENU_API= "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId="
