@@ -18,6 +18,8 @@ const RestaurantMenu =()=>{
                  `${MENU_API}${param.resId}`
                 // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId=651011&catalog_qa=undefined&submitAction=ENTER"
                 //  "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=22.56430&lng=88.36930&restaurantId=766502"
+                //72605 74644
+
             );
             const json= await data.json();
 
