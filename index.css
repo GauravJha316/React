@@ -64,3 +64,6 @@
 .filter{
     display: flex; 
 }
+.user-card{
+    padding: 10px solid black;
+}
