@@ -6,10 +6,13 @@ class About extends Component{
     constructor(props){ 
         super(props);
 
-        console.log("Parent Constructor")
+        // console.log("Parent Constructor")
     }
     componentDidMount(){
         console.log("Parent Component Did Mount")
+    }
+    componentWillUnmount(){
+        console.log("component will amount")
     }
 render(){
     console.log("parent render");
@@ -20,7 +23,7 @@ render(){
             <h2>Namaste React</h2>
             {/* <User name={"Gaurav Jha function"} /> */}
             <UserClass name={"Gaurav its"} location={"Dehradun Class"}/>
-             <UserClass name={"Saurav its"} location={"Dehradun Class"}/>
+        
         </div>
     );
 }

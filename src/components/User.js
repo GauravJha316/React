@@ -5,7 +5,10 @@ const User =({name})=>{
 
     useEffect(()=>{
          
-    },[])
+    },[]);
+    async function getUsrInfo() {
+        // const data
+    }
     return (
     <div className="user-card">
         <h1>Count= {count}</h1>
