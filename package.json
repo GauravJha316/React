@@ -10,7 +10,9 @@
   "author": "Gaurav Jha",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.16.3"
+    "@parcel/transformer-react-refresh-wrap": "^2.16.4",
+    "parcel": "^2.16.4",
+    "react-refresh": "^0.18.0"
   },
   "dependencies": {
     "react": "^19.2.3",

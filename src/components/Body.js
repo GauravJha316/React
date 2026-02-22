@@ -3,6 +3,7 @@ import resList from "../utils/mockData";
 import {useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 // import resList from "../utils/mockData";
 
 const Body =()=>{
@@ -32,6 +33,10 @@ const fetchData = async ()=> {
 }
 };
 
+    const onlineStatus=useOnlineStatus();
+    if(onlineStatus === false)
+         return 
+         <h1>look like u r offline check ur internet </h1>
 //conditional rendering -rendering on the basis of condition
 // if(listOfRestaurant.length===0){
 //     return <Shimmer/>
