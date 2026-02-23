@@ -34,9 +34,9 @@ const fetchData = async ()=> {
 };
 
     const onlineStatus=useOnlineStatus();
-    if(onlineStatus === false)
-         return 
-         <h1>look like u r offline check ur internet </h1>
+if (onlineStatus === false) {
+    return <h1>Looks like you are offline. Check your internet connection.</h1>;
+}
 //conditional rendering -rendering on the basis of condition
 // if(listOfRestaurant.length===0){
 //     return <Shimmer/>
