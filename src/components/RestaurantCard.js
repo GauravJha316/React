@@ -12,8 +12,9 @@ const RestaurantCard=(props)=>{
         costForTwo,
         sla,
       } =resData.info;
-    return(
-        <div className="res-card">
+      return(
+   
+        <div className="m-4 p-4 w-[200px]" style={{backgroundColor :"f0f0f0"}}>
             <img alt="res-logo" className="res-logo" src={CDN_URL+ cloudinaryImageId}/>
             <h3>{name}</h3>
              <h4>{cuisines?.slice(0, 2).join(", ")}</h4>
@@ -21,7 +22,7 @@ const RestaurantCard=(props)=>{
             <h3>{costForTwo}</h3>
             <h4>{sla?.deliveryTime} mins</h4>
         </div>
-    )
+      )
 }
 
 export default RestaurantCard;

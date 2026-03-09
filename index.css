@@ -1,3 +1,5 @@
+@import "tailwindcss";
+/* 
 .header{
     display: flex;
     justify-content: space-between;
@@ -66,4 +68,4 @@
 }
 .user-card{
     padding: 10px solid black;
-}
+}  */

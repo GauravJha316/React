@@ -19,20 +19,20 @@ const Header=()=>{
    }, []);
 
     return(
-        <div className="header">
+        <div className="flex justify-between bg-pink-100 shadow-lg">
             <div className="logo">
-                <img src= {LOGO_URl}alt="logo"/>
+                <img className="w-56 h-20" src= {LOGO_URl}alt="logo"/>
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>online Status:{onlineStatus ? '✅' :'🀄'}</li>
-                    <li> <Link to="/">Home</Link></li>
-                    <li> <Link to="/about">About Us</Link></li>
-                     <li> <Link to="/grocery">Grocery Us</Link></li>
-                    <li>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4 ">
+                    <li className="px-4">online Status:{onlineStatus ? '✅' :'🀄'}</li>
+                    <li className="px-4"> <Link to="/">Home</Link></li>
+                    <li className="px-4"> <Link to="/about">About Us</Link></li>
+                     <li className="px-4"> <Link to="/grocery">Grocery Us</Link></li>
+                    <li className="px-4">
                         <Link to="/contact">Contact Us</Link>
                         </li>
-                    <li> Cart</li>
+                    <li className="px-4"> Cart</li>
                     <button className="login" onClick={()=>{btnNameReact === "Login" ?setBtnNameReact("Logout"): setBtnNameReact("Login")
                 
                     }}>{btnNameReact}</button>
